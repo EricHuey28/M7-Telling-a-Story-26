@@ -8,7 +8,7 @@ var current_item_index := 0
 
 var dialogue_items: Array[String] = [
 	"Good Morning",
-	"Deepwoken",
+	"67",
 	"BFS",
 	"yo dude",
 	"Hgrrr",
