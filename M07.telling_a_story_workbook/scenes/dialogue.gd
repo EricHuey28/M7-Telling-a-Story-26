@@ -16,7 +16,6 @@ var bodies := {
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 @onready var body: TextureRect = %Body
 @onready var expression: TextureRect = %Expression
-
 var dialogue_items: Array[Dictionary] = [
 	{
 		"expression": expressions["regular"],

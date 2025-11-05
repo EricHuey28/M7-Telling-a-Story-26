@@ -95,7 +95,7 @@ offset_right = -0.040161133
 offset_bottom = -0.3600464
 theme = ExtResource("1_led2e")
 text = "jjnlnkllk"
-visible_characters = 4
+visible_characters = 2
 visible_ratio = 0.325
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
