@@ -16,19 +16,14 @@ var expressions := {
 }
 func _ready() -> void:
 	create_buttons()
-
-
 func create_button_pink() -> void:
 	var button := Button.new()
 	row_bodies.add_child(button)
-
 	var key := "pink"
 	button.text = key.capitalize()
 	button.pressed.connect(func() -> void:
 		body.texture = bodies[key]
 	)
-
-
 func create_buttons() -> void:
 	for current_body: String in bodies:
 		var button := Button.new()
@@ -37,7 +32,6 @@ func create_buttons() -> void:
 		button.pressed.connect(func() -> void:
 			body.texture = bodies[current_body]
 		)
-
 	for current_expression: String in expressions:
 		var button := Button.new()
 		row_expressions.add_child(button)
