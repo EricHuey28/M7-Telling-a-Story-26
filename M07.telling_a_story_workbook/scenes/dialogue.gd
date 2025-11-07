@@ -24,22 +24,22 @@ var dialogue_items: Array[Dictionary] = [
 	},
 	{
 		"expression": expressions["regular"],
-		"text": "[wave] Yeah I saw him in room 201[/wave]",
+		"text": "[shake] Yeah I saw him in room 201[/shake]",
 		"character": bodies["pink"],
 	},
 	{
 		"expression": expressions["sad"],
-		"text": "[tornado freq=1.0] Who is the teacher for that classroom?[/tornado]",
+		"text": "[rainbow val = 1.0] Who is the teacher for that classroom?[/rainbow]",
 		"character": bodies["sophia"],
 	},
 	{
 		"expression": expressions["happy"],
-		"text": "[shake]That is Mr.Bombadillicrocadillo's classroom[/shake]",
+		"text": "[wave]That is Mr.Bombadillicrocadillo's classroom[/wave]",
 		"character": bodies["pink"],
 	},
 	{
 		"expression": expressions["happy"],
-		"text": "[rainbow val=0.8]Alright Thanks![/rainbow]",
+		"text": "[tornado freq=1.0]Alright Thanks![/tornado]",
 		"character": bodies["sophia"],
 	},
 	
