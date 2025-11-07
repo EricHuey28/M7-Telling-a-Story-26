@@ -19,27 +19,27 @@ var bodies := {
 var dialogue_items: Array[Dictionary] = [
 	{
 		"expression": expressions["regular"],
-		"text": "Hey have you seen John Pork?",
+		"text": "[wave] Hey [/wave] have you seen John Pork?",
 		"character": bodies["sophia"],
 	},
 	{
 		"expression": expressions["regular"],
-		"text": "Yeah I saw him in room 201",
+		"text": "[rainbow val=0.8] Yeah I saw him in room 201[/rainbow]",
 		"character": bodies["pink"],
 	},
 	{
 		"expression": expressions["sad"],
-		"text": "Who is the teacher for that classroom?",
+		"text": "[tornado freq=1.0] Who is the teacher for that classroom?[/tornado]",
 		"character": bodies["sophia"],
 	},
 	{
 		"expression": expressions["happy"],
-		"text": "That is Mr.Bombadillicrocadillo's classroom",
+		"text": "[shake]That is Mr.Bombadillicrocadillo's classroom[/shake]",
 		"character": bodies["pink"],
 	},
 	{
 		"expression": expressions["happy"],
-		"text": "Alright Thanks!",
+		"text": "[rainbow val=0.8]Alright Thanks![/rainbow]",
 		"character": bodies["sophia"],
 	},
 	
@@ -62,7 +62,12 @@ func show_text() -> void:
 	var sound_start_position := randf() * sound_max_offset
 	audio_stream_player.play(sound_start_position)
 	tween.finished.connect(audio_stream_player.stop)
+	body.texture = current_item["character"]
 	slide_in()
+	next_button.disabled = true
+	tween.finished.connect(func() -> void:
+		next_button.disabled = false
+	)
 	
 	
 	

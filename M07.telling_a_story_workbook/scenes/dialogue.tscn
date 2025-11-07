@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d3pfu6uvbxx3b"]
+[gd_scene load_steps=11 format=3 uid="uid://d3pfu6uvbxx3b"]
 
 [ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="1_bfpow"]
 [ext_resource type="Theme" uid="uid://drays61pfu7xc" path="res://lessons/main_theme.tres" id="1_led2e"]
@@ -14,6 +14,12 @@ shader_parameter/pattern_sampler = ExtResource("2_fyky8")
 shader_parameter/bg_color = Color(0, 1, 1, 1)
 shader_parameter/pattern_color = Color(0, 0, 0, 1)
 shader_parameter/pattern_size = 67.0
+
+[sub_resource type="InputEventAction" id="InputEventAction_x1cjp"]
+action = &"advance_text"
+
+[sub_resource type="Shortcut" id="Shortcut_tp716"]
+events = [SubResource("InputEventAction_x1cjp")]
 
 [node name="Dialogue" type="Control"]
 layout_mode = 3
@@ -79,6 +85,7 @@ grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("1_led2e")
 theme_override_font_sizes/font_size = 50
+shortcut = SubResource("Shortcut_tp716")
 text = "Next"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -91,12 +98,12 @@ anchor_right = 0.9620001
 anchor_bottom = 0.54200006
 offset_left = 0.039978027
 offset_top = 0.35998535
-offset_right = -0.040161133
-offset_bottom = -0.3600464
+offset_right = 28.76001
+offset_bottom = 16.919983
 theme = ExtResource("1_led2e")
-text = "jjnlnkllk"
-visible_characters = 2
-visible_ratio = 0.325
+bbcode_enabled = true
+fit_content = true
+horizontal_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
