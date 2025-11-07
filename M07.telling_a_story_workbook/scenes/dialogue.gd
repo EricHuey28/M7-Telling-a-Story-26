@@ -19,12 +19,12 @@ var bodies := {
 var dialogue_items: Array[Dictionary] = [
 	{
 		"expression": expressions["regular"],
-		"text": "[wave] Hey [/wave] have you seen John Pork?",
+		"text": "[rainbow val=0.8] Hey [/rainbow] have you seen John Pork?",
 		"character": bodies["sophia"],
 	},
 	{
 		"expression": expressions["regular"],
-		"text": "[rainbow val=0.8] Yeah I saw him in room 201[/rainbow]",
+		"text": "[wave] Yeah I saw him in room 201[/wave]",
 		"character": bodies["pink"],
 	},
 	{
@@ -57,12 +57,13 @@ func show_text() -> void:
 	rich_text_label.visible_ratio = 0.0
 	var tween := create_tween()
 	var text_appearing_duration := 1.0
+	body.texture = current_item["character"]
+
 	tween.tween_property(rich_text_label, "visible_ratio", 1.0, text_appearing_duration)
 	var sound_max_offset := audio_stream_player.stream.get_length() - text_appearing_duration
 	var sound_start_position := randf() * sound_max_offset
 	audio_stream_player.play(sound_start_position)
 	tween.finished.connect(audio_stream_player.stop)
-	body.texture = current_item["character"]
 	slide_in()
 	next_button.disabled = true
 	tween.finished.connect(func() -> void:
